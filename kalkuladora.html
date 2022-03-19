@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es-es">
+    <meta charset="utf-8"/>
+<head>
+    <title>Kalkuladora</title>
+    <link rel="icon" href="AMOGUS.png">
+    <link rel="stylesheet" href="kalculadora.css">
+    <script>
+        function comprobar(f) {
+            var n1 = parseInt(f.numero1.value)
+            var n2 = parseInt(f.numero2.value)
+            var resultado = (f.resultado.value)
+            if(f.operacion.value == "") 
+            {
+                alert("Elige una operacion(+-*/)")
+                return false
+            }
+
+            switch (f.operacion.value)
+            {
+                case "+":
+                    f.resultado.value = n1 + n2
+                    return false
+                case "-":
+                    f.resultado.value = n1 - n2
+                    return false
+                    
+                case "*":
+                    f.resultado.value = n1 * n2
+                    return false
+                case "/":
+                    if(n2 == 0) {
+                        f.resultado.value = "Bro no dividas por 0"
+                        return false
+                    }
+                    else {
+                        f.resultado.value = n1 / n2
+                        return false
+                    }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Kalkuladora prodigiosa</h1>
+    <form action="" method="post" onsubmit="return comprobar(this)">
+        <p>
+        <input type="number" name="numero1" required="required" class="text">
+        <select name="operacion">
+            <option value="" selected></option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" name="numero2" required="required" class="text">
+        </p>
+        <p>
+            <input type="submit" value="Calcular" id="calcu"> Resultado: <input type="text" name="resultado" id="resultado" placeholder="...resultado">
+        </p>
+        <p id="desing">Graphic design is my pasion</p>
+    </form>
+</body>
+</html>
+
+

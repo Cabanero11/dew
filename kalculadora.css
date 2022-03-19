@@ -1,0 +1,59 @@
+h1 {
+    background-color: lightblue;
+    border-style: solid;  
+    color:azure;
+}
+
+body {
+    background-color: darkblue;
+}
+
+p {
+    color:lime;
+}
+
+#resultado {
+    border-style: solid;
+    border-width: 10px;
+    color:maroon;
+    border-color: maroon;
+}
+
+select {
+    animation: animacion 0.1s ease;
+    animation-iteration-count: infinite;
+}
+
+#desing {
+    color: greenyellow;
+    font-size: xx-small;
+    animation: animacion 2s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacion {
+    from{color:black}
+    to{color: greenyellow;}
+}
+
+.text {
+    color: crimson;
+    background-color: fuchsia;
+    border-style:groove;
+    border-color: gold;
+}
+
+#calcu {
+    color:dodgerblue;
+    background-color: salmon;
+    cursor: pointer;
+}
+
+#calcu:hover {
+    background-color: rgb(13, 84, 155);
+}
+
+#calcu:active {
+    background-color: rgb(13, 84, 155);
+    transform: translateY(5px);
+}
